@@ -9,13 +9,13 @@ export class AppComponent implements AfterContentInit {
 
   ngAfterContentInit(): void {
 
-    const srcConfettiJS = 'assets/lib/confetti.js';
+    // const srcConfettiJS = 'assets/lib/confetti.js';
 
-    window.onload = () => {
-      let confettiJS = document.createElement('script');
-      confettiJS.src = srcConfettiJS;
-      document.head.appendChild(confettiJS);
-    }
+    // window.onload = () => {
+    //   let confettiJS = document.createElement('script');
+    //   confettiJS.src = srcConfettiJS;
+    //   document.head.appendChild(confettiJS);
+    // }
 
   }
 
