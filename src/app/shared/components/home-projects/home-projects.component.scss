@@ -1,0 +1,125 @@
+@import '../../../variables.scss';
+
+#container-principal {
+    margin-top: 100px;
+    padding-top: 20px;
+    background-color: $color-secondary;
+
+    h1 {
+        text-align: center;
+        color: $color-primary;
+        font-weight: bold;
+        margin-top: 100px;
+    }
+
+    h1::before {
+        content: '';
+        position: absolute;
+        margin-top: 50px;
+        height: 5px;
+        width: 3rem;
+        background: $color-primary;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+    }
+
+    #container-project {
+        margin: 0 auto;
+        width: 80%;
+        margin-top: 100px;
+
+        .container-image-project {
+            min-height: 300px;
+
+            img {
+                width: 100%;
+            }
+
+        }
+
+        .container-information-project {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            
+            .container-secondary-information {
+                margin: 0 auto;
+                width: 70%;
+
+                h2 {
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+
+                p {
+                    font-size: 16px;
+                    color: $color-content-letters;
+                    max-width: 60rem;
+                    line-height: 1.7;
+                    margin-bottom: 3rem;
+                }
+
+                .container-buttons-actions {
+                    margin: 20px 0px 30px 0px;
+                    text-align: center;
+
+                    button {
+                        svg {
+                            fill: $color-content-letters;
+                            margin: 0 auto;
+                            transform: scale(.6);
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+    
+}
+
+/* css grid */
+#container-project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+mat-divider {
+    grid-column: 1 / span 2;
+}
+
+/* responsive desgin */
+@media screen and (max-width: 768px) {
+
+    #container-principal {
+        margin-top: 100px;
+    }
+
+    mat-divider {
+        grid-column: 1 / span 1;
+    }
+
+    #container-project {
+        width: 100% !important;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container-image-project {
+        min-height: 240px !important;
+    }
+
+    .container-secondary-information {
+        width: 90% !important;
+
+        h2 {
+            text-align: center
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+}

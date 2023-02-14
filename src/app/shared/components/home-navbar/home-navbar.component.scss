@@ -1,0 +1,33 @@
+@import '../../../variables.scss';
+
+#container-principal {
+    
+    mat-toolbar {
+        position: absolute;
+        background: rgba(255, 255, 255, 0);
+        color: black;
+
+        button {
+            font-size: 16px;
+            font-weight: 400;
+            svg {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .separation-space {
+        flex: 1 1 auto;
+    }
+
+    .menu-items {
+        background-color: white;
+    }
+
+}
+
+.static-navbar {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}

@@ -1,0 +1,118 @@
+@import '../../../variables.scss';
+
+#container-principal {
+
+    .container-image-presentation {
+        background-image: url(../../../../assets/images/presentation.jpg);
+        width: 100%;
+        height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    h1 {
+        text-align: center;
+        color: $color-primary;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    h1::before {
+        content: '';
+        position: absolute;
+        margin-top: 50px;
+        height: 5px;
+        width: 3rem;
+        background: $color-primary;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+    }
+
+
+    .container-information-about {
+        margin-top: 100px;
+    }
+
+    .container-profile-image,
+    .container-description-personal {
+        
+        section {
+            width: 80%;
+        }
+    }
+
+    .container-profile-image {
+        section {
+            margin: 0 auto;
+            margin-top: 20px;
+            text-align: center;
+            min-height: 200px;
+
+            img {
+                width: 50%;
+                border-radius: 48%;
+            }
+        }
+    }
+
+    .container-description-personal {
+        padding-bottom: 0px;
+
+        section {
+            box-shadow: 0 4px 25px rgb(14 36 49 / 15%);
+            padding: 1.1rem 0;
+            border-radius: 0.5rem;
+            text-align: center;
+            color: $color-content-letters;
+            
+            p {
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 22px;
+                width: 60%;
+                margin: 0 auto;
+            }
+
+            h3 {
+                margin-top: 20px;
+                text-align: center;
+                padding: 0px 20%;
+                font-weight: 500;
+            }
+        }
+
+    }
+}
+
+/* css grid */
+.container-information-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* responsive desgin */
+@media screen and (max-width: 768px) {
+
+    .container-image-presentation {
+        height: 200px !important;
+    }
+
+    .container-information-about {
+        margin-top: 70px !important;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container-description-personal {
+        section {
+            margin: 0 auto;
+            width: 100% !important;
+
+            p {
+                width: 80% !important;
+            }
+
+        }
+    }
+
+}
