@@ -50,7 +50,8 @@
             min-height: 200px;
 
             img {
-                width: 50%;
+                height: 250px;
+                width: 230px;
                 border-radius: 48%;
             }
         }
@@ -114,5 +115,12 @@
 
         }
     }
+
+    .container-profile-image {
+        section {
+            margin-bottom: 20px !important;
+        }
+    }
+
 
 }
