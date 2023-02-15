@@ -25,7 +25,7 @@ export class HomeNavbarComponent implements AfterViewInit, OnDestroy {
   ];
 
   ngAfterViewInit(): void {
-    this.runConfetti();
+    timer(600).pipe( takeUntil( this.destroyed$ ) ).subscribe( _ => this.runConfetti() );
   }
 
   ngOnDestroy(): void {
