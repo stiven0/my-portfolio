@@ -1,7 +1,7 @@
 {
   "name": "Robert Idarraga",
   "short_name": "Robert Idarraga",
-  "theme_color": "#FF5851",
+  "theme_color": "#fff7f7",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
