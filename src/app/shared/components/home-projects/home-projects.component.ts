@@ -21,6 +21,16 @@ export class HomeProjectsComponent {
       redirectTo: 'https://dayvents.com/'
     },
     {
+      image: 'dayvents.jpg',
+      title: 'Inspiración - Frases Diarias ✍🏼',
+      description: 'Aplicación movil que genera frases diarias.',
+      technologies: [ 'Flutter', 'Dart' ],
+      buttons: [
+        { name: 'store', url: 'https://play.google.com/store/apps/details?id=com.fraseapp.dev' }
+      ],
+      redirectTo: 'https://play.google.com/store/apps/details?id=com.fraseapp.dev'
+    },
+    {
       image: 'secretary-treasury.jpg',
       title: 'Página Web Secretaria de Hacienda de Puerto Berrio',
       description: 'Web en fase de prueba que permite consultar el impuesto de industria y comercio del municipio de Puerto Berrio',
