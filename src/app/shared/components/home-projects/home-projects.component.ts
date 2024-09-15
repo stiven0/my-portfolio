@@ -21,7 +21,7 @@ export class HomeProjectsComponent {
       redirectTo: 'https://dayvents.com/'
     },
     {
-      image: 'dayvents.jpg',
+      image: 'day-phrase.jpg',
       title: 'Inspiración - Frases Diarias ✍🏼',
       description: 'Aplicación movil que genera frases diarias.',
       technologies: [ 'Flutter', 'Dart' ],
