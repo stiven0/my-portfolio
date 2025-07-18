@@ -21,6 +21,17 @@ export class HomeProjectsComponent {
       redirectTo: 'https://dayvents.com/'
     },
     {
+      image: 'agvm.PNG',
+      title: 'AGVM 🚀',
+      description: 'Administrador de versiones globales de Angular multiplataforma.',
+      technologies: [ 'Javascript', 'Typescript', 'NodeJS', 'CLI' ],
+      buttons: [
+        { name: 'web', url: 'https://www.npmjs.com/package/agvm' },
+        { name: 'github', url: 'https://github.com/stiven0/agvm' },
+      ],
+      redirectTo: 'https://www.npmjs.com/package/agvm'
+    },
+    {
       image: 'day-phrase.jpg',
       title: 'Inspiración - Frases Diarias ✍🏼',
       description: 'Aplicación movil que genera frases diarias.',
@@ -29,16 +40,6 @@ export class HomeProjectsComponent {
         { name: 'store', url: 'https://play.google.com/store/apps/details?id=com.fraseapp.dev' }
       ],
       redirectTo: 'https://play.google.com/store/apps/details?id=com.fraseapp.dev'
-    },
-    {
-      image: 'secretary-treasury.jpg',
-      title: 'Página Web Secretaria de Hacienda de Puerto Berrio',
-      description: 'Web en fase de prueba que permite consultar el impuesto de industria y comercio del municipio de Puerto Berrio',
-      technologies: [ 'Javascript', 'Angular', 'NodeJS', 'Express', 'MongoDB' ],
-      buttons: [
-        { name: 'web', url: 'https://frontend-secretary-treasury-pb.vercel.app/' }
-      ],
-      redirectTo: 'https://frontend-secretary-treasury-pb.vercel.app/'
     },
     {
       image: 'js-time-ago.jpg',
