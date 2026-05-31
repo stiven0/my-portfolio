@@ -8,9 +8,10 @@ import { Confetti } from '@core/interfaces/confetti';
 declare const confetti: Confetti;
 
 @Component({
-  selector: 'app-home-navbar',
-  templateUrl: './home-navbar.component.html',
-  styleUrls: ['./home-navbar.component.scss']
+    selector: 'app-home-navbar',
+    templateUrl: './home-navbar.component.html',
+    styleUrls: ['./home-navbar.component.scss'],
+    standalone: false
 })
 export class HomeNavbarComponent implements AfterViewInit, OnDestroy {
 

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home-skills',
-  templateUrl: './home-skills.component.html',
-  styleUrls: ['./home-skills.component.scss']
+    selector: 'app-home-skills',
+    templateUrl: './home-skills.component.html',
+    styleUrls: ['./home-skills.component.scss'],
+    standalone: false
 })
 export class HomeSkillsComponent {
   openNewTab = ( url: string ) => window.open( url, '_blank');
