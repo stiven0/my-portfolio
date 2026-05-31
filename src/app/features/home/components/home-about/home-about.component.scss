@@ -1,9 +1,9 @@
-@import '../../../variables.scss';
+@import '../../../../variables.scss';
 
 #container-principal {
 
     .container-image-presentation {
-        background-image: url(../../../../assets/images/presentation.jpg);
+        background-image: url(../../../../../assets/images/presentation.jpg);
         width: 100%;
         height: 350px;
         background-size: cover;
