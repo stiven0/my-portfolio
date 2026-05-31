@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
 import { Projects } from '@core/interfaces/projects';
 
 @Component({
     selector: 'app-home-projects',
     templateUrl: './home-projects.component.html',
     styleUrls: ['./home-projects.component.scss'],
-    standalone: false
+    standalone: true,
+    imports: [MatButtonModule, MatDividerModule],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeProjectsComponent {
 
-  projects: Projects[] = [
+  readonly projects = signal<Projects[]>([
     {
       image: 'dayvents.jpg',
       title: 'Dayvents 💙🤍',
@@ -53,7 +57,7 @@ export class HomeProjectsComponent {
       ],
       redirectTo: 'https://www.npmjs.com/package/js-time-ago'
     }
-  ];
+  ]);
 
   redirecTo = ( url: string ) => window.open( url );
 

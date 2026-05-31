@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
     selector: 'app-home-footer',
     templateUrl: './home-footer.component.html',
     styleUrls: ['./home-footer.component.scss'],
-    standalone: false
+    standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeFooterComponent {
-  currentDate = new Date();
+  readonly currentYear = signal(new Date().getFullYear());
 }

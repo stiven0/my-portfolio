@@ -1,7 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AngularMaterialModule } from '@shared/angular-material/angular-material.module';
-
 import { HomeProjectsComponent } from './home-projects.component';
 
 describe('HomeProjectsComponent', () => {
@@ -10,8 +8,7 @@ describe('HomeProjectsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HomeProjectsComponent],
-      imports: [AngularMaterialModule]
+      imports: [HomeProjectsComponent]
     })
     .compileComponents();
 

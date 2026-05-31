@@ -22,7 +22,7 @@
     </button>
 
     <mat-menu #menuOptions="matMenu">
-      @for (item of menuItems; track item) {
+      @for (item of menuItems(); track item) {
         <button mat-menu-item routerLink="/" [fragment]="item.redirectTo">
           <span>{{ item.name }}</span>
         </button>

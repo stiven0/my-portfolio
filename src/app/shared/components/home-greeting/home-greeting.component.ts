@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'app-home-greeting',
     templateUrl: './home-greeting.component.html',
     styleUrls: ['./home-greeting.component.scss'],
-    standalone: false
+    standalone: true,
+    imports: [MatButtonModule],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeGreetingComponent {
   redirecTo = ( url: string ) => window.open( url );

@@ -4,7 +4,7 @@
 
     <h1 #titleProjects>Proyectos</h1>
 
-    @for (project of projects; track project; let i = $index) {
+    @for (project of projects(); track project; let i = $index) {
       <div id="container-project">
         <section class="container-image-project">
           <img [src]=" '../../../../assets/images/projects/' + project.image" alt="image-project">

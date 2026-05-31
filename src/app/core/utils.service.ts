@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 
 import { fromEvent, map, Observable } from 'rxjs';
-import { HasEventTargetAddRemove } from 'rxjs/internal/observable/fromEvent';
+
+type ScrollEventTarget = Window | Document | HTMLElement;
 
 @Injectable({
     providedIn: 'root'
 })
 export class UtilsService {
 
-    listenScrolling( target: HasEventTargetAddRemove<Event> ): Observable<number> {
+    listenScrolling( target: ScrollEventTarget ): Observable<number> {
 
         const scroll$ = fromEvent( target, 'scroll' );
         return scroll$.pipe( 

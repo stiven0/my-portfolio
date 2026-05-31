@@ -1,6 +1,12 @@
-import { Component, OnDestroy, AfterViewInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { RouterLink } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { Subject, takeUntil, timer } from 'rxjs';
+import { timer } from 'rxjs';
 
 import { MenuItems } from '@core/interfaces/menu-items';
 import { Confetti } from '@core/interfaces/confetti';
@@ -11,35 +17,40 @@ declare const confetti: Confetti;
     selector: 'app-home-navbar',
     templateUrl: './home-navbar.component.html',
     styleUrls: ['./home-navbar.component.scss'],
-    standalone: false
+    standalone: true,
+    imports: [
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatMenuModule,
+        RouterLink
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeNavbarComponent implements AfterViewInit, OnDestroy {
+export class HomeNavbarComponent implements AfterViewInit {
 
-  private destroyed$ = new Subject<void>();
+  private readonly destroyRef = inject(DestroyRef);
 
-  menuItems: MenuItems[] = [ 
+  readonly menuItems = signal<MenuItems[]>([
     { name: 'Inicio', redirectTo: 'home' },
     { name: 'Sobre mí', redirectTo: 'about' },
     { name: 'Proyectos', redirectTo: 'projects' },
     { name: 'Skills', redirectTo: 'skills' },
     { name: 'Contacto', redirectTo: 'contact' }
-  ];
+  ]);
 
   ngAfterViewInit(): void {
-    timer(600).pipe( takeUntil( this.destroyed$ ) ).subscribe( _ => this.runConfetti() );
+    timer(600)
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => this.runConfetti());
   }
 
-  ngOnDestroy(): void {
-
-    this.destroyed$.next();
-    this.destroyed$.complete();
-
-  }
-
-  runConfetti() {
+  runConfetti(): void {
 
     confetti.start();
-    timer(4000).pipe( takeUntil( this.destroyed$ ) ).subscribe( _ => confetti.stop() );
+    timer(4000)
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => confetti.stop());
 
   }
 
