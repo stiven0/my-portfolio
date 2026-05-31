@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+import { SharedModule } from '@shared/shared.module';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
-    standalone: false
+    standalone: true,
+    imports: [SharedModule],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
 }
