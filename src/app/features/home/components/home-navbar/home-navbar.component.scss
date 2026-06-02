@@ -41,6 +41,15 @@
                 background-color: $color-primary;
             }
         }
+
+        &.active {
+            color: $color-white;
+
+            .line {
+                width: 3.6rem;
+                background-color: $color-primary;
+            }
+        }
     }
 
     .confetti-btn {
@@ -71,6 +80,7 @@
             padding: 0;
             list-style: none;
             display: ruby;
+            // gap: 0.45rem;
 
             button {
                 height: 2.4rem;

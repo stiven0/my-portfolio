@@ -2,7 +2,13 @@
   <ul>
     @for (item of menuItems(); track item) {
       <li>
-        <a routerLink="/" [fragment]="item.redirectTo">
+        <a
+          routerLink="/"
+          [fragment]="item.redirectTo"
+          (click)="setActive(item.redirectTo)"
+          [class.active]="activeSection() === item.redirectTo"
+          [attr.aria-current]="activeSection() === item.redirectTo ? 'page' : null"
+        >
           <span class="line"></span>
           <span>{{ item.name }}</span>
         </a>
@@ -54,7 +60,7 @@
 
   <mat-menu #menuOptions="matMenu">
     @for (item of menuItems(); track item) {
-      <button mat-menu-item routerLink="/" [fragment]="item.redirectTo">
+      <button mat-menu-item routerLink="/" [fragment]="item.redirectTo" (click)="setActive(item.redirectTo)">
         <span>{{ item.name }}</span>
       </button>
     }
