@@ -32,7 +32,6 @@ export class HomeNavbarComponent implements AfterViewInit {
   private readonly destroyRef = inject(DestroyRef);
 
   readonly menuItems = signal<MenuItems[]>([
-    { name: 'Inicio', redirectTo: 'home' },
     { name: 'Sobre mí', redirectTo: 'about' },
     { name: 'Proyectos', redirectTo: 'projects' },
     { name: 'Skills', redirectTo: 'skills' },

@@ -1,95 +1,58 @@
 @use '../../../../variables.scss' as *;
 
-#container-principal {
-    margin-top: 100px;
-    padding-top: 20px;
-    background-color: $color-secondary;
-    padding-bottom: 90px;
+.content-section.experience,
+.content-section.contact {
+    padding: 1.8rem 0;
 
-    h1 {
-        text-align: center;
-        color: $color-primary;
-        font-weight: bold;
-        margin-top: 20px;
-        margin-bottom: 80px;
+    h2 {
+        margin: 0 0 1rem;
+        color: $color-white;
+        font-size: clamp(1.8rem, 4vw, 2.2rem);
     }
-
-    h1::before {
-        content: '';
-        position: absolute;
-        margin-top: 50px;
-        height: 5px;
-        width: 3rem;
-        background: $color-primary;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 5px;
-    }
-
-    .container-contact {
-        padding: 30px;
-        margin: 0 auto;
-        width: 50%;
-        box-shadow: 0 4px 25px rgb(14 36 49 / 15%);
-        text-align: center;
-
-        div {
-            margin-bottom: 35px;
-
-            span {
-                margin-right: 10px;
-                font-size: 20px;
-                color: $color-content-letters;
-            }
-
-            a {
-                font-size: 19px;
-                color: $color-complementary;
-            }
-
-            button {
-                svg {
-                    fill: $color-content-letters;
-                    margin: 0 auto;
-                    transform: scale(.45);
-                }
-            }
-
-        }
-
-        div:last-child {
-            margin-bottom: 0px;
-        }
-
-    }
-
 }
 
-/* responsive desgin */
-@media screen and (max-width: 768px) {
+.content-section.experience {
+    article {
+        border-left: 2px solid rgba(34, 211, 238, 0.5);
+        padding: 0.2rem 0 0.6rem 1rem;
+        margin-bottom: 1rem;
 
-    #container-principal {
-        min-height: 80vh;
-
-        .container-contact {
-            padding: 1.1rem 0;
-            width: 100%;
-
-            div {
-                
-                span {
-                    margin-right: 5px;
-                    font-size: 18px;
-                }
-    
-                a {
-                    font-size: 17px;
-                }
-
-            }
-
+        .period {
+            margin: 0;
+            color: $color-primary;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 700;
         }
 
-    }
+        h3 {
+            margin: 0.35rem 0;
+            color: #e2e8f0;
+            font-size: 1.15rem;
+        }
 
+        p {
+            margin: 0;
+            color: $color-content-letters;
+            line-height: 1.75;
+        }
+    }
+}
+
+.content-section.contact {
+    .contact-grid {
+        display: grid;
+        gap: 0.7rem;
+
+        button {
+            justify-content: flex-start;
+            border-color: rgba(245, 158, 11, 0.6);
+            color: #ffe1ad;
+            border-radius: 12px;
+            padding: 0.55rem 0.85rem;
+            font-size: 0.82rem;
+            letter-spacing: 0.03em;
+        }
+    }
 }

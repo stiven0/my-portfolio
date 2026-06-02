@@ -1,0 +1,47 @@
+@use '../../../variables.scss' as *;
+
+.home-layout {
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
+	gap: 3.5rem;
+	background:
+		radial-gradient(circle at 15% 15%, rgba(34, 211, 238, 0.12), transparent 40%),
+		radial-gradient(circle at 85% 85%, rgba(245, 158, 11, 0.12), transparent 35%),
+		linear-gradient(180deg, #0b1220 0%, #101a2f 100%);
+	color: $color-white;
+	padding: 2.5rem 2.5rem 0;
+}
+
+.left-rail {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1rem 0 2rem;
+}
+
+.right-rail {
+	padding: 1.5rem 0 0;
+}
+
+@media screen and (max-width: 1024px) {
+	.home-layout {
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+		padding: 1.2rem 1rem 0;
+	}
+
+	.left-rail {
+		position: relative;
+		height: auto;
+		gap: 1rem;
+		padding: 0;
+	}
+
+	.right-rail {
+		padding: 0;
+	}
+}
