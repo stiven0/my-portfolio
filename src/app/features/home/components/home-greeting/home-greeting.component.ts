@@ -10,5 +10,4 @@ import { MatButtonModule } from '@angular/material/button';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeGreetingComponent {
-  redirecTo = ( url: string ) => window.open( url );
 }

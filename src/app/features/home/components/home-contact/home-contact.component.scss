@@ -1,6 +1,5 @@
 @use '../../../../variables.scss' as *;
 
-.content-section.experience,
 .content-section.contact {
     padding: 1.8rem 0;
 
@@ -8,35 +7,6 @@
         margin: 0 0 1rem;
         color: $color-white;
         font-size: clamp(1.8rem, 4vw, 2.2rem);
-    }
-}
-
-.content-section.experience {
-    article {
-        border-left: 2px solid rgba(34, 211, 238, 0.5);
-        padding: 0.2rem 0 0.6rem 1rem;
-        margin-bottom: 1rem;
-
-        .period {
-            margin: 0;
-            color: $color-primary;
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 700;
-        }
-
-        h3 {
-            margin: 0.35rem 0;
-            color: #e2e8f0;
-            font-size: 1.15rem;
-        }
-
-        p {
-            margin: 0;
-            color: $color-content-letters;
-            line-height: 1.75;
-        }
     }
 }
 

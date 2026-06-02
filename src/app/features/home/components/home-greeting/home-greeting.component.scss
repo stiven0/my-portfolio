@@ -44,41 +44,6 @@
         font-size: 1.02rem;
     }
 
-    .button-resume {
-        width: fit-content;
-        border-radius: 999px;
-        font-weight: 700;
-        background: linear-gradient(120deg, $color-primary, #38bdf8);
-        color: #06202b;
-        box-shadow: 0 12px 30px rgba(56, 189, 248, 0.3);
-    }
-
-    .social-links {
-        margin: 0.25rem 0 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        gap: 0.6rem;
-
-        button {
-            height: 2.4rem;
-            width: 2.4rem;
-            border: 1px solid rgba(148, 163, 184, 0.32);
-            border-radius: 12px;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-
-            &:hover {
-                transform: translateY(-3px);
-                border-color: $color-primary;
-            }
-
-            svg {
-                fill: #d5deed;
-                margin: 0 auto;
-                transform: scale(0.56);
-            }
-        }
-    }
 }
 
 @media screen and (max-width: 1024px) {

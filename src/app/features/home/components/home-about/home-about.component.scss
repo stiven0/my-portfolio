@@ -10,13 +10,9 @@
         letter-spacing: -0.02em;
     }
 
-    .about-grid {
-        display: grid;
-        grid-template-columns: 1.25fr 0.8fr;
-        gap: 1.8rem;
-    }
-
     .about-copy {
+        max-width: 52rem;
+
         p {
             margin: 0 0 1rem;
             color: $color-content-letters;
@@ -35,28 +31,4 @@
         font-weight: 600;
     }
 
-    .about-photo {
-        display: flex;
-        justify-content: center;
-
-        img {
-            width: min(280px, 100%);
-            border-radius: 24px;
-            border: 1px solid rgba(148, 163, 184, 0.35);
-            object-fit: cover;
-            box-shadow: 0 25px 45px rgba(2, 8, 23, 0.35);
-        }
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .content-section.about {
-        .about-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .about-photo {
-            justify-content: flex-start;
-        }
-    }
 }
