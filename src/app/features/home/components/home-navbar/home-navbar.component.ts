@@ -29,8 +29,7 @@ import { MenuItems } from '@core/interfaces/menu-items';
     { name: 'Sobre mí', redirectTo: 'about' },
     { name: 'Experiencia', redirectTo: 'experience' },
     { name: 'Proyectos', redirectTo: 'projects' },
-    { name: 'Skills', redirectTo: 'skills' },
-    { name: 'Contacto', redirectTo: 'contact' }
+    { name: 'Skills', redirectTo: 'skills' }
   ]);
 
     readonly activeSection = signal<string>('about');
