@@ -46,7 +46,7 @@ import { MenuItems } from '@core/interfaces/menu-items';
 
     private syncActiveSectionByScroll(): void {
       const sections = this.menuItems();
-      const triggerLine = window.innerHeight * 0.32;
+      const triggerLine = window.innerHeight * 0.50;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const { redirectTo } = sections[i];
