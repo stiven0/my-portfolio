@@ -77,12 +77,18 @@
       </button>
     }
 
-    <button mat-menu-item (click)="setLanguage('es')">
-      <span>ES</span>
+    <button mat-menu-item class="mobile-language-title" disabled>
+      <span>{{ 'nav.language' | translate }}</span>
     </button>
 
-    <button mat-menu-item (click)="setLanguage('en')">
-      <span>EN</span>
+    <button mat-menu-item class="mobile-language-option" [class.active]="isLanguage('es')" (click)="setLanguage('es')">
+      <span class="mobile-language-code">ES</span>
+      <span class="mobile-language-label">Español</span>
+    </button>
+
+    <button mat-menu-item class="mobile-language-option" [class.active]="isLanguage('en')" (click)="setLanguage('en')">
+      <span class="mobile-language-code">EN</span>
+      <span class="mobile-language-label">English</span>
     </button>
   </mat-menu>
 </nav>
