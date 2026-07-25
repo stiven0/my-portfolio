@@ -10,15 +10,20 @@
           [attr.aria-current]="activeSection() === item.redirectTo ? 'page' : null"
         >
           <span class="line"></span>
-          <span>{{ item.name }}</span>
+          <span>{{ item.name | translate }}</span>
         </a>
       </li>
     }
   </ul>
 
   <div class="nav-actions">
+    <div class="language-switcher" role="group" [attr.aria-label]="'nav.language' | translate">
+      <button type="button" [class.active]="isLanguage('es')" (click)="setLanguage('es')">ES</button>
+      <button type="button" [class.active]="isLanguage('en')" (click)="setLanguage('en')">EN</button>
+    </div>
+
     <button class="button-resume" mat-raised-button (click)="openExternal('https://drive.google.com/file/d/1JpGTQ4n916PT0_7QfSgO0xooYOmaVJJU/view')">
-      Descargar CV
+      {{ 'nav.resume' | translate }}
     </button>
 
     <ul class="social-links">
@@ -68,8 +73,16 @@
   <mat-menu #menuOptions="matMenu">
     @for (item of menuItems(); track item) {
       <button mat-menu-item routerLink="/" [fragment]="item.redirectTo" (click)="setActive(item.redirectTo)">
-        <span>{{ item.name }}</span>
+        <span>{{ item.name | translate }}</span>
       </button>
     }
+
+    <button mat-menu-item (click)="setLanguage('es')">
+      <span>ES</span>
+    </button>
+
+    <button mat-menu-item (click)="setLanguage('en')">
+      <span>EN</span>
+    </button>
   </mat-menu>
 </nav>

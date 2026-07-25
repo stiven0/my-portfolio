@@ -68,6 +68,33 @@
         gap: 0.8rem;
         margin-top: 1rem;
 
+        .language-switcher {
+            display: inline-flex;
+            gap: 0.35rem;
+            padding: 0.22rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.28);
+            background: rgba(15, 23, 42, 0.48);
+
+            button {
+                min-width: 2.2rem;
+                height: 2rem;
+                border: 0;
+                border-radius: 999px;
+                background: transparent;
+                color: $color-content-letters;
+                font-weight: 800;
+                letter-spacing: 0.08em;
+                cursor: pointer;
+                transition: background-color 0.2s ease, color 0.2s ease;
+
+                &.active {
+                    background: $color-primary;
+                    color: #06202b;
+                }
+            }
+        }
+
         .button-resume {
             border-radius: 999px;
             font-weight: 700;

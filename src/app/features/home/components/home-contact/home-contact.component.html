@@ -1,15 +1,15 @@
 <section class="content-section contact" id="contact" fragment="contact">
-    <h2>Contacto</h2>
+    <h2>{{ 'section.contact' | translate }}</h2>
 
     <div class="contact-grid">
         <button mat-stroked-button (click)="openNewTab('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=stiven2750@gmail.com')">
-            Email · stiven2750&#64;gmail.com
+            {{ 'contact.email' | translate }}
         </button>
         <button mat-stroked-button (click)="openNewTab('https://api.whatsapp.com/send/?phone=3136545137&text&type=phone_number&app_absent=0')">
-            WhatsApp · +57 313 654 5137
+            {{ 'contact.whatsapp' | translate }}
         </button>
         <button mat-stroked-button (click)="openNewTab('https://www.linkedin.com/in/robert-idarraga')">
-            LinkedIn · in/robert-idarraga
+            {{ 'contact.linkedin' | translate }}
         </button>
     </div>
 </section>

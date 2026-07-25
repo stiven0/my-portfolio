@@ -5,8 +5,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { auditTime, fromEvent } from 'rxjs';
+import { TranslatePipe } from '@ngx-translate/core';
 
 import { MenuItems } from '@core/interfaces/menu-items';
+import { AppLanguage, LanguageService } from '@core/services/language.service';
 
 @Component({
     selector: 'app-home-navbar',
@@ -17,53 +19,68 @@ import { MenuItems } from '@core/interfaces/menu-items';
         MatButtonModule,
         MatIconModule,
         MatMenuModule,
+      TranslatePipe,
         RouterLink
     ],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-  export class HomeNavbarComponent {
+export class HomeNavbarComponent {
 
-    private readonly destroyRef = inject(DestroyRef);
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly languageService = inject(LanguageService);
 
   readonly menuItems = signal<MenuItems[]>([
-    { name: 'Sobre mí', redirectTo: 'about' },
-    { name: 'Experiencia', redirectTo: 'experience' },
-    { name: 'Proyectos', redirectTo: 'projects' },
-    { name: 'Skills', redirectTo: 'skills' }
+    { name: 'nav.about', redirectTo: 'about' },
+    { name: 'nav.experience', redirectTo: 'experience' },
+    { name: 'nav.projects', redirectTo: 'projects' },
+    { name: 'nav.skills', redirectTo: 'skills' }
   ]);
 
-    readonly activeSection = signal<string>('about');
+  readonly activeSection = signal<string>('about');
+  readonly currentLanguage = this.languageService.language;
 
-    constructor() {
-      fromEvent(window, 'scroll')
-        .pipe(auditTime(50), takeUntilDestroyed(this.destroyRef))
-        .subscribe(() => this.syncActiveSectionByScroll());
+  constructor() {
+    fromEvent(window, 'scroll')
+      .pipe(auditTime(50), takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => this.syncActiveSectionByScroll());
 
-      setTimeout(() => this.syncActiveSectionByScroll(), 0);
-    }
+    setTimeout(() => this.syncActiveSectionByScroll(), 0);
+  }
 
-    setActive = ( sectionId: string ) => this.activeSection.set(sectionId);
+  setActive = ( sectionId: string ) => this.activeSection.set(sectionId);
 
-    private syncActiveSectionByScroll(): void {
-      const sections = this.menuItems();
-      const triggerLine = window.innerHeight * 0.50;
+  setLanguage(language: AppLanguage): void {
+    this.languageService.setLanguage(language);
+  }
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const { redirectTo } = sections[i];
-        const element = document.getElementById(redirectTo);
-        if (!element) {
-          continue;
-        }
+  toggleLanguage(): void {
+    this.languageService.toggleLanguage();
+  }
 
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= triggerLine) {
-          this.activeSection.set(redirectTo);
-          return;
-        }
+  isLanguage(language: AppLanguage): boolean {
+    return this.languageService.isLanguage(language);
+  }
+
+  private syncActiveSectionByScroll(): void {
+    const sections = this.menuItems();
+    const triggerLine = window.innerHeight * 0.50;
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const { redirectTo } = sections[i];
+      const element = document.getElementById(redirectTo);
+      if (!element) {
+        continue;
       }
 
-      this.activeSection.set(sections[0]?.redirectTo ?? 'about');
+      const rect = element.getBoundingClientRect();
+      if (rect.top <= triggerLine) {
+        this.activeSection.set(redirectTo);
+        return;
+      }
     }
+
+    this.activeSection.set(sections[0]?.redirectTo ?? 'about');
+  }
 
   openExternal = ( url: string ) => window.open( url, '_blank', 'noopener,noreferrer' );
 

@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "about": "About me",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "resume": "Download CV",
+    "language": "Language selector"
+  },
+  "greeting": {
+    "title": "Robert Idarraga",
+    "role": "Fullstack Web Developer",
+    "intro": "I design and build accessible, fast web products focused on user experience."
+  },
+  "about": {
+    "paragraph1": "I am a Fullstack Web Developer with 3 years of experience building high-impact frontend and backend solutions. I mainly work with JavaScript/TypeScript, Angular, Ionic and Node.js, taking part in the full development cycle: technical design, implementation, testing, deployment and continuous improvement.",
+    "paragraph2": "I have solid experience creating and managing APIs, integrating services and maintaining scalable architectures. I focus on performance, code quality and best practices to ensure stable, maintainable and easy-to-evolve applications.",
+    "paragraph3": "I also have experience deploying applications to Play Store and managing their operations, as well as repository management with Git, collaborative development workflows and cloud solutions running on Azure. Additionally, I have knowledge of Flutter and Dart for cross-platform mobile development.",
+    "quote": "I build software with a focus on quality, performance and real value for the end user."
+  },
+  "section": {
+    "about": "About me",
+    "contact": "Contact",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience"
+  },
+  "experience": {
+    "period": "2023 — Present",
+    "role": "Fullstack Web Developer",
+    "summary": "Building web and mobile applications with Angular, Ionic and Node.js, focused on scalable architecture, performance and code quality. Experience creating and managing APIs, deploying apps to Play Store, version control with Git and operating solutions on Azure."
+  },
+  "projects": {
+    "lead": "Some products and libraries I have worked on recently.",
+    "items": {
+      "dayvents": {
+        "title": "Dayvents 💙🤍",
+        "subtitle": "Web and mobile app in production",
+        "description": "Progressive web app (PWA) deployed to Play Store with around 380 users.",
+        "buttons": {
+          "web": "View web",
+          "store": "Play Store"
+        }
+      },
+      "agvm": {
+        "title": "AGVM 🚀",
+        "subtitle": "Open source CLI for Angular",
+        "description": "Cross-platform global version manager for Angular.",
+        "buttons": {
+          "npm": "npm package",
+          "repo": "View repository"
+        }
+      },
+      "dayPhrase": {
+        "title": "Inspiration - Daily Phrases ✍🏼",
+        "subtitle": "Published mobile app",
+        "description": "Mobile app that generates daily phrases.",
+        "buttons": {
+          "store": "Play Store"
+        }
+      },
+      "timeAgo": {
+        "title": "js-time-ago library",
+        "subtitle": "npm library for relative time handling",
+        "description": "Library that helps determine how long ago or how far in the future an event occurred.",
+        "buttons": {
+          "repo": "View repository",
+          "npm": "npm package"
+        }
+      },
+      "cleanApi": {
+        "title": "Clean Architecture API",
+        "subtitle": "Backend template for scalable APIs",
+        "description": "Backend API with clean architecture using Node.js, Express and TypeScript, focused on maintainability, scalability and best practices.",
+        "buttons": {
+          "repo": "View repository"
+        }
+      },
+      "cleanFlutter": {
+        "title": "Clean Architecture Flutter",
+        "subtitle": "Mobile base with a clean architecture focus",
+        "description": "Starter Flutter app with Dart and Riverpod using clean architecture to separate concerns and ease testing.",
+        "buttons": {
+          "repo": "View repository"
+        }
+      }
+    }
+  },
+  "skills": {
+    "stack": "Stack and tools"
+  },
+  "contact": {
+    "email": "Email · stiven2750@gmail.com",
+    "whatsapp": "WhatsApp · +57 313 654 5137",
+    "linkedin": "LinkedIn · in/robert-idarraga"
+  }
+}

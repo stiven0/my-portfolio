@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Skills",
+    "resume": "Descargar CV",
+    "language": "Selector de idioma"
+  },
+  "greeting": {
+    "title": "Robert Idarraga",
+    "role": "Desarrollador Fullstack Web",
+    "intro": "Diseño y construyo productos web accesibles, rápidos y con foco en experiencia de usuario."
+  },
+  "about": {
+    "paragraph1": "Soy Desarrollador Fullstack Web con 3 años de experiencia construyendo soluciones de alto impacto en frontend y backend. Trabajo principalmente con JavaScript/TypeScript, Angular, Ionic y Node.js, participando en todo el ciclo de desarrollo: diseño técnico, implementación, pruebas, despliegue y mejora continua.",
+    "paragraph2": "Tengo experiencia sólida en creación y gestión de APIs, integración entre servicios y mantenimiento de arquitecturas escalables. Me enfoco en performance, calidad de código y buenas prácticas para asegurar aplicaciones estables, mantenibles y fáciles de evolucionar.",
+    "paragraph3": "También cuento con experiencia en despliegue de aplicaciones en Play Store y gestión de su operación, además de administración de repositorios con Git, flujos colaborativos de desarrollo y operación de soluciones en la nube con Azure. Adicionalmente, tengo conocimientos en Flutter y Dart para desarrollo móvil multiplataforma.",
+    "quote": "Desarrollo software con enfoque en calidad, rendimiento y valor real para el usuario final."
+  },
+  "section": {
+    "about": "Sobre mí",
+    "contact": "Contacto",
+    "skills": "Skills",
+    "projects": "Proyectos",
+    "experience": "Experiencia"
+  },
+  "experience": {
+    "period": "2023 — Actualidad",
+    "role": "Desarrollador Fullstack Web",
+    "summary": "Construcción de aplicaciones web y móviles con Angular, Ionic y Node.js, enfocado en arquitectura escalable, performance y calidad de código. Experiencia en creación y gestión de APIs, despliegue de apps en Play Store, control de versiones con Git y operación de soluciones en Azure."
+  },
+  "projects": {
+    "lead": "Algunos productos y librerías en los que he trabajado recientemente.",
+    "items": {
+      "dayvents": {
+        "title": "Dayvents 💙🤍",
+        "subtitle": "Aplicación web y móvil en producción",
+        "description": "Aplicación web progresiva (PWA) desplegada en Play Store con alrededor de 380 usuarios.",
+        "buttons": {
+          "web": "Ver web",
+          "store": "Play Store"
+        }
+      },
+      "agvm": {
+        "title": "AGVM 🚀",
+        "subtitle": "CLI open source para Angular",
+        "description": "Administrador de versiones globales de Angular multiplataforma.",
+        "buttons": {
+          "npm": "npm package",
+          "repo": "Ver repositorio"
+        }
+      },
+      "dayPhrase": {
+        "title": "Inspiración - Frases Diarias ✍🏼",
+        "subtitle": "Aplicación móvil publicada",
+        "description": "Aplicación móvil que genera frases diarias.",
+        "buttons": {
+          "store": "Play Store"
+        }
+      },
+      "timeAgo": {
+        "title": "Librería js-time-ago",
+        "subtitle": "Librería npm para manejo de tiempo relativo",
+        "description": "Librería que permite determinar hace cuánto tiempo ocurrió u ocurrirá un evento.",
+        "buttons": {
+          "repo": "Ver repositorio",
+          "npm": "npm package"
+        }
+      },
+      "cleanApi": {
+        "title": "Clean Architecture API",
+        "subtitle": "Plantilla backend para APIs escalables",
+        "description": "Backend API con arquitectura limpia usando Node.js, Express y TypeScript, orientado a mantenibilidad, escalabilidad y buenas prácticas.",
+        "buttons": {
+          "repo": "Ver repositorio"
+        }
+      },
+      "cleanFlutter": {
+        "title": "Clean Architecture Flutter",
+        "subtitle": "Base móvil con enfoque en arquitectura limpia",
+        "description": "Aplicación base en Flutter con Dart y Riverpod aplicando arquitectura limpia para separar responsabilidades y facilitar pruebas.",
+        "buttons": {
+          "repo": "Ver repositorio"
+        }
+      }
+    }
+  },
+  "skills": {
+    "stack": "Stack y herramientas"
+  },
+  "contact": {
+    "email": "Email · stiven2750@gmail.com",
+    "whatsapp": "WhatsApp · +57 313 654 5137",
+    "linkedin": "LinkedIn · in/robert-idarraga"
+  }
+}

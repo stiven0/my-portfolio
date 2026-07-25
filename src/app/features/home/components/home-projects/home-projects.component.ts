@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
+import { TranslatePipe } from '@ngx-translate/core';
 import { Projects } from '@core/interfaces/projects';
 
 @Component({
@@ -8,7 +9,7 @@ import { Projects } from '@core/interfaces/projects';
     templateUrl: './home-projects.component.html',
     styleUrls: ['./home-projects.component.scss'],
     standalone: true,
-    imports: [MatButtonModule, MatDividerModule],
+    imports: [MatButtonModule, MatDividerModule, TranslatePipe],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeProjectsComponent {
@@ -16,70 +17,70 @@ export class HomeProjectsComponent {
   readonly projects = signal<Projects[]>([
     {
       image: 'dayvents.jpg',
-      title: 'Dayvents 💙🤍',
-      subtitle: 'Aplicación web y móvil en producción',
-      description: 'Aplicación web progresiva (PWA) desplegada en Play Store con alrededor de 380 usuarios.',
+      title: 'projects.items.dayvents.title',
+      subtitle: 'projects.items.dayvents.subtitle',
+      description: 'projects.items.dayvents.description',
       technologies: [ 'Javascript', 'Angular', 'NodeJS', 'Express', 'MongoDB' ],
       buttons: [  
-        { name: 'ver web', url: 'https://dayvents.com/' }, 
-        { name: 'play store', url: 'https://play.google.com/store/apps/details?id=com.dayvents.app' } 
+        { name: 'projects.items.dayvents.buttons.web', url: 'https://dayvents.com/' }, 
+        { name: 'projects.items.dayvents.buttons.store', url: 'https://play.google.com/store/apps/details?id=com.dayvents.app' } 
       ],
       redirectTo: 'https://dayvents.com/'
     },
     {
       image: 'agvm.PNG',
-      title: 'AGVM 🚀',
-      subtitle: 'CLI open source para Angular',
-      description: 'Administrador de versiones globales de Angular multiplataforma.',
+      title: 'projects.items.agvm.title',
+      subtitle: 'projects.items.agvm.subtitle',
+      description: 'projects.items.agvm.description',
       technologies: [ 'Javascript', 'Typescript', 'NodeJS', 'CLI' ],
       buttons: [
-        { name: 'npm package', url: 'https://www.npmjs.com/package/agvm' },
-        { name: 'ver repositorio', url: 'https://github.com/stiven0/agvm' },
+        { name: 'projects.items.agvm.buttons.npm', url: 'https://www.npmjs.com/package/agvm' },
+        { name: 'projects.items.agvm.buttons.repo', url: 'https://github.com/stiven0/agvm' },
       ],
       redirectTo: 'https://www.npmjs.com/package/agvm'
     },
     {
       image: 'day-phrase.jpg',
-      title: 'Inspiración - Frases Diarias ✍🏼',
-      subtitle: 'Aplicación móvil publicada',
-      description: 'Aplicación movil que genera frases diarias.',
+      title: 'projects.items.dayPhrase.title',
+      subtitle: 'projects.items.dayPhrase.subtitle',
+      description: 'projects.items.dayPhrase.description',
       technologies: [ 'Flutter', 'Dart' ],
       buttons: [
-        { name: 'play store', url: 'https://play.google.com/store/apps/details?id=com.fraseapp.dev' }
+        { name: 'projects.items.dayPhrase.buttons.store', url: 'https://play.google.com/store/apps/details?id=com.fraseapp.dev' }
       ],
       redirectTo: 'https://play.google.com/store/apps/details?id=com.fraseapp.dev'
     },
     {
       image: 'js-time-ago.jpg',
-      title: 'Librería js-time-ago',
-      subtitle: 'Librería npm para manejo de tiempo relativo',
-      description: 'Librería que permite determinar hace cuánto tiempo ocurrió u ocurrirá un evento',
+      title: 'projects.items.timeAgo.title',
+      subtitle: 'projects.items.timeAgo.subtitle',
+      description: 'projects.items.timeAgo.description',
       technologies: [ 'Javascript', 'Typescript', 'NodeJS' ],
       buttons: [
-        { name: 'ver repositorio', url: 'https://github.com/stiven0/js-time-ago' },
-        { name: 'npm package', url: 'https://www.npmjs.com/package/js-time-ago' }
+        { name: 'projects.items.timeAgo.buttons.repo', url: 'https://github.com/stiven0/js-time-ago' },
+        { name: 'projects.items.timeAgo.buttons.npm', url: 'https://www.npmjs.com/package/js-time-ago' }
       ],
       redirectTo: 'https://www.npmjs.com/package/js-time-ago'
     },
     {
       image: 'github.png',
-      title: 'Clean Architecture API',
-      subtitle: 'Plantilla backend para APIs escalables',
-      description: 'Backend API con arquitectura limpia usando Node.js, Express y TypeScript, orientado a mantenibilidad, escalabilidad y buenas prácticas.',
+      title: 'projects.items.cleanApi.title',
+      subtitle: 'projects.items.cleanApi.subtitle',
+      description: 'projects.items.cleanApi.description',
       technologies: [ 'NodeJS', 'Express', 'TypeScript' ],
       buttons: [
-        { name: 'ver repositorio', url: 'https://github.com/stiven0/clean-architecture-api' }
+        { name: 'projects.items.cleanApi.buttons.repo', url: 'https://github.com/stiven0/clean-architecture-api' }
       ],
       redirectTo: 'https://github.com/stiven0/clean-architecture-api'
     },
     {
       image: 'github.png',
-      title: 'Clean Architecture Flutter',
-      subtitle: 'Base móvil con enfoque en arquitectura limpia',
-      description: 'Aplicación base en Flutter con Dart y Riverpod aplicando arquitectura limpia para separar responsabilidades y facilitar pruebas.',
+      title: 'projects.items.cleanFlutter.title',
+      subtitle: 'projects.items.cleanFlutter.subtitle',
+      description: 'projects.items.cleanFlutter.description',
       technologies: [ 'Flutter', 'Dart', 'Riverpod' ],
       buttons: [
-        { name: 'ver repositorio', url: 'https://github.com/stiven0/clean-architecture-flutter' }
+        { name: 'projects.items.cleanFlutter.buttons.repo', url: 'https://github.com/stiven0/clean-architecture-flutter' }
       ],
       redirectTo: 'https://github.com/stiven0/clean-architecture-flutter'
     }
