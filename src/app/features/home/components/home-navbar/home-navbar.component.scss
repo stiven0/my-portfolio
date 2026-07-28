@@ -159,6 +159,40 @@
     }
 }
 
+.mobile-resume {
+    border-radius: 14px;
+    background: linear-gradient(135deg, #fbbf24, #f97316);
+    color: #0f172a;
+    border: 1px solid rgba(251, 191, 36, 0.55);
+
+    &:hover {
+        transform: translateY(-1px);
+        filter: brightness(1.03);
+        box-shadow: 0 12px 28px rgba(249, 115, 22, 0.34);
+    }
+
+    .mat-mdc-menu-item-text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 0.85rem;
+    }
+
+    mat-icon {
+        order: 1;
+        width: 1.7rem;
+        height: 1.7rem;
+        padding: 0.35rem;
+        color: #0f172a;
+        flex: 0 0 auto;
+
+        svg {
+            display: block;
+        }
+    }
+}
+
 .mobile-language-title {
     pointer-events: none;
     opacity: 1;

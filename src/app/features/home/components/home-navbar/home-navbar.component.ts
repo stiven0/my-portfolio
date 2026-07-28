@@ -84,4 +84,11 @@ export class HomeNavbarComponent {
 
   openExternal = ( url: string ) => window.open( url, '_blank', 'noopener,noreferrer' );
 
+  openCv = () => {
+    const cvUrl = this.currentLanguage() === 'es'
+      ? 'https://drive.google.com/file/d/1JpGTQ4n916PT0_7QfSgO0xooYOmaVJJU/view'
+      : 'https://drive.google.com/file/d/1gKdm4pjqQLeSu01_dLD2XzWJD71uU30o/view';
+    this.openExternal(cvUrl);
+  }
+
 }
