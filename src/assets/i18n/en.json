@@ -33,6 +33,14 @@
   "projects": {
     "lead": "Some products and libraries I have worked on recently.",
     "items": {
+      "geometry_runner": {
+        "title": "Geometry Runner",
+        "subtitle": "Runner-style game",
+        "description": "Game built with Flutter and Flame, released on the Play Store.",
+        "buttons": {
+          "store": "Play Store"
+        }
+      },
       "dayvents": {
         "title": "Dayvents 💙🤍",
         "subtitle": "Web and mobile app in production",

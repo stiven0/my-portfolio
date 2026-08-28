@@ -16,6 +16,17 @@ export class HomeProjectsComponent {
 
   readonly projects = signal<Projects[]>([
     {
+      image: 'geometry-runner.PNG',
+      title: 'projects.items.geometry_runner.title',
+      subtitle: 'projects.items.geometry_runner.subtitle',
+      description: 'projects.items.geometry_runner.description',
+      technologies: [ 'Flutter', 'Flame', 'Dart' ],
+      buttons: [
+        { name: 'projects.items.geometry_runner.buttons.store', url: 'https://play.google.com/store/apps/details?id=com.geometry_runner' }
+      ],
+      redirectTo: 'https://geometry-runner.com/'
+    },
+    {
       image: 'dayvents.jpg',
       title: 'projects.items.dayvents.title',
       subtitle: 'projects.items.dayvents.subtitle',

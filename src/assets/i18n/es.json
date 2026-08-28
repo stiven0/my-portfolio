@@ -33,6 +33,14 @@
   "projects": {
     "lead": "Algunos productos y librerías en los que he trabajado recientemente.",
     "items": {
+      "geometry_runner": {
+        "title": "Geometry Runner",
+        "subtitle": "Juego de estilo runner",
+        "description": "Juego desarrollado con Flutter y Flame, publicado en Play Store.",
+        "buttons": {
+          "store": "Play Store"
+        }
+      },
       "dayvents": {
         "title": "Dayvents 💙🤍",
         "subtitle": "Aplicación web y móvil en producción",
