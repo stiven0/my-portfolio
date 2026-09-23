@@ -10,12 +10,12 @@
   "greeting": {
     "title": "Robert Idarraga",
     "role": "Fullstack Web Developer",
-    "intro": "I design and build accessible, fast web products focused on user experience."
+    "intro": "I design and build accessible, fast web products focused on user experience. I also build mobile apps with Flutter and Dart, with releases on the Play Store."
   },
   "about": {
-    "paragraph1": "I am a Fullstack Web Developer with 3 years of experience building high-impact frontend and backend solutions. I mainly work with JavaScript/TypeScript, Angular, Ionic and Node.js, taking part in the full development cycle: technical design, implementation, testing, deployment and continuous improvement.",
+    "paragraph1": "I am a Fullstack Web Developer with 3 years of experience building high-impact frontend and backend solutions. I mainly work with JavaScript/TypeScript, Angular, Ionic and Node.js, and I also have practical knowledge of Flutter and Dart for cross-platform mobile development. I take part in the full development cycle: technical design, implementation, testing, deployment and continuous improvement.",
     "paragraph2": "I have solid experience creating and managing APIs, integrating services and maintaining scalable architectures. I focus on performance, code quality and best practices to ensure stable, maintainable and easy-to-evolve applications.",
-    "paragraph3": "I also have experience deploying applications to Play Store and managing their operations, as well as repository management with Git, collaborative development workflows and cloud solutions running on Azure. Additionally, I have knowledge of Flutter and Dart for cross-platform mobile development.",
+    "paragraph3": "I also have experience publishing apps to the Play Store and managing their operations —including my own Flutter apps— as well as repository management with Git, collaborative development workflows and cloud solutions running on Azure.",
     "quote": "I build software with a focus on quality, performance and real value for the end user."
   },
   "section": {
@@ -28,10 +28,10 @@
   "experience": {
     "period": "2023 — Present",
     "role": "Fullstack Web Developer",
-    "summary": "Building web and mobile applications with Angular, Ionic and Node.js, focused on scalable architecture, performance and code quality. Experience creating and managing APIs, deploying apps to Play Store, version control with Git and operating solutions on Azure."
+    "summary": "Building web and mobile applications with Angular, Ionic, Node.js, Flutter and Dart, focused on scalable architecture, performance and code quality. Experience creating and managing APIs, deploying apps to Play Store, version control with Git and operating solutions on Azure."
   },
   "projects": {
-    "lead": "Some products and libraries I have worked on recently.",
+    "lead": "Some web products, mobile apps and libraries I have worked on recently.",
     "items": {
       "geometry_runner": {
         "title": "Geometry Runner",
@@ -62,7 +62,7 @@
       "dayPhrase": {
         "title": "Inspiration - Daily Phrases ✍🏼",
         "subtitle": "Published mobile app",
-        "description": "Mobile app that generates daily phrases.",
+        "description": "Flutter app published on the Play Store that generates daily phrases.",
         "buttons": {
           "store": "Play Store"
         }
